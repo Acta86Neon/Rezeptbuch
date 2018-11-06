@@ -29,4 +29,9 @@ private ingredients: Ingredient[] = [
     this.ingredients.push(...ingredients);
     this.ingredientsChanged.next(this.ingredients.slice());
   }
+  
+  updateIngrediend(index: number, newIngridient: Ingredient) {
+    this.ingredients[index] = newIngridient;
+    this.ingredientsChanged.next(this.ingredients.slice());
+  }
 }
